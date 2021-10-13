@@ -3,8 +3,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+You can download the project from github by cloning it into your IDE. 
+
+ 
+
+
 
 In the project directory, you can run:
+
+### `npm install  `
+
+This downloads/installs the necessary packages needed to run the project in the browser 
 
 ### `npm start`
 
