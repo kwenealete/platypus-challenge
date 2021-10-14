@@ -7,6 +7,7 @@ import {
   FaLock,
   FaPhone
  } from 'react-icons/fa';
+
  
  function App() {
    const url = 'https://randomuser.me/api/?results=10';
@@ -17,6 +18,7 @@ import {
    const [userProfiles, setUserProfiles] = useState([]);
    const [title, setTitle] = useState('name');
    const [indexValue,setIndexValue]=useState(0);
+  
 
    //fetching data from the API
 
@@ -29,7 +31,7 @@ import {
 
     //fetching a new random profile
 
-      setUserProfiles(persons);
+     setUserProfiles(persons);
      setIsLoading(false);
     
    };
@@ -62,7 +64,7 @@ import {
      if(title) {
          switch(title){
              case 'name':
-                 return <p className='user-value'>{ first +last}</p>
+                 return <p className='user-value'>{ first + ' ' + last}</p>
                  case 'email':
                     return <p className='user-value'>{email}</p>
                     case 'age':
@@ -72,13 +74,13 @@ import {
                  case 'password':
                  return <p className='user-value'>{password}</p>
                  case 'street':
-                 return <p className='user-value'>{name+','+number}</p>
+                 return <p className='user-value'>{name+', '+number}</p>
                  default: return ''
          }
      }
    }
 
-// Implementing button functionality for next and previous buttons
+// Implementing functionality for next and previous buttons
 
     function onNextButton(){
     if(indexValue + 1 === userProfiles.length ) {
@@ -92,6 +94,8 @@ import {
         if(indexValue - 1 === -1) {setIndexValue(userProfiles.length - 1)}
         else setIndexValue(indexValue-1)
     }
+
+
 function getPersonaData(index){
     
 
